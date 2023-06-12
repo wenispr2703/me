@@ -93,35 +93,16 @@ body {
   color: var(--color-tertiary);
 }
 
-/* Menu Burger */
-.burger-menu {
-  display: none; /* Sembunyikan menu burger secara default */
-  cursor: pointer;
-  position: relative;
-  width: 30px;
-  height: 20px;
+@media (max-width: 768px) {
+  .navbar-name {
+    font-size: 14px;
+  }
+  
+  .navbar-menu li a {
+    font-size: 10px;
+  }
 }
 
-.bar {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-secondary);
-  transition: transform 0.3s ease-in-out;
-}
-
-.bar:first-child {
-  top: 0;
-}
-
-.bar:nth-child(2) {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.bar:last-child {
-  bottom: 0;
-}
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
