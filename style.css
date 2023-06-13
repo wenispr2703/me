@@ -4,14 +4,14 @@
   --font-secondary: "Montserrat", sans-serif;
 }
 :root {
-  --color-default: #222831;
+  --color-default: rgb(34, 40, 49);
   --color-primary: #00adb5;
   --color-secondary: #eee;
   --color-tertiary: rgb(57, 62, 70);
 }
 
 body {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--color-default);
 }
 h1 {
@@ -271,7 +271,15 @@ h2 {
 }
 #portfolio h2 {
   text-align: center;
+  margin-bottom: -40px;
 
+}
+#portfolio p {
+  font-size: 14px;
+  text-align: center;
+  font-family: var(--font-primary);
+  color: var(--color-secondary);
+  margin-bottom: 20px;
 }
 .card {
   background-color: rgba(57, 62, 70,0.5);
@@ -292,10 +300,11 @@ h2 {
 
 .card:hover img {
   transform: scale(1.1);
-  filter: blur(6px);
+  filter: blur(4px);
 }
 
 .card .caption {
+  display: inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -304,6 +313,9 @@ h2 {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   z-index: 2;
+  background-color:rgba(34, 40, 49, 0.9) ;
+  padding: 10px;
+  
 }
 
 .card:hover .caption {
@@ -315,15 +327,20 @@ h2 {
   font-family: var(--font-primary);
   font-weight: bold;
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
+}
+.card h4{
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  font-weight: bold;
+  font-size: 14px;
 }
 
-.card p {
+#portfolio .card p {
   font-family: var(--font-primary);
   color: var(--color-secondary);
-  font-weight: bold;
-  margin: 5px 0 0;
-  font-size: 16px;
+  font-size: 12px;
+  margin-top: 10px;
 }
 
 /*--------------------------------------------------------------
