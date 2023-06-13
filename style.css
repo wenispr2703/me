@@ -7,32 +7,66 @@
   --color-default: #222831;
   --color-primary: #00adb5;
   --color-secondary: #eee;
-  --color-tertiary: #393e46;
+  --color-tertiary: rgb(57, 62, 70);
 }
 
 body {
   font-family: "Poppins", Arial, sans-serif;
   background-color: var(--color-default);
 }
+h1 {
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+  font-weight: bold;
+  text-align: center;
+  font-size: 40px;
+}
 
+h2 {
+  line-height: 3;
+  font-size: 60px;
+  font-weight: bold;
+  z-index: 999;
+  margin-bottom: 10px;
+}
+.title {
+  color: var(--color-secondary);
+}
+.subtitle {
+  color: var(--color-primary);
+}
+
+.arrow-box i {
+  position: relative;
+  z-index: 999;
+  color: var(--color-primary);
+  font-size: 30px;
+  transform: translateX(-50%);
+  line-height: 1024px;
+  left: 15px;
+}
+.arrow-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-tertiary);
+  margin-bottom: 40px;
+}
 /*--------------------------------------------------------------
 # Vertical & Horizontal Line
 --------------------------------------------------------------*/
 .vertical-line {
+  margin-top: -20px;
   position: absolute;
   width: 0.1px;
   opacity: 0.5;
-  height: 715px;
+  height: 670px;
   background-color: var(--color-tertiary);
   left: 33%;
   transform: translateX(-25%);
   z-index: 1;
-}
-@media (max-width: 768px) {
-  .vertical-line {
-    display: block;
-    height: 814px;
-  }
 }
 
 .horizontal-line {
@@ -91,16 +125,6 @@ body {
 
 .navbar-menu li a:hover {
   color: var(--color-tertiary);
-}
-
-@media (max-width: 768px) {
-  .navbar-name {
-    font-size: 16px;
-  }
-  
-  .navbar-menu li a {
-    font-size: 12px;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -182,53 +206,9 @@ body {
   font-size: 20px;
 }
 
-@media (max-width: 768px) {
-  #home .button1,
-  .button2 {
-    margin-right: 10px;
-  }
-
-  #home .whoiam {
-    font-size: 40px;
-    margin-left: 5%;
-  }
-}
-
-#home .arrow-icon {
-  position: relative;
-  z-index: 999;
-  color: var(--color-primary);
-  font-size: 30px;
-  /* margin-left: 31.4%; */
-  transform: translateX(-50%);
-  line-height: 1024px;
-  left: 15px;
-}
-.arrow-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  background-color: var(--color-tertiary);
-  margin-left: 30.7%;
+#home .arrow-box {
   margin-top: 370px;
-  margin-bottom: 40px;
-}
-.arrow-box i {
-  position: relative;
-  top: 2px;
-  color: var(--color-secondary);
-  font-size: 40px;
-  transform: translateX(-50%);
-}
-
-@media (max-width: 768px) {
-  .arrow-box {
-    margin-left: 25%;
-    margin-top: 530px;
-    margin-bottom: 2%;
-  }
+  margin-left: 30.7%;
 }
 
 /*--------------------------------------------------------------
@@ -247,24 +227,13 @@ body {
   justify-content: flex-start;
 }
 
-#about .about-left h2 {
-  line-height: 3;
+#about h2 {
   top: 90px;
-  font-size: 60px;
-  font-weight: bold;
   position: relative;
-  z-index: 2;
-  margin-bottom: 10px;
 }
-#about .about-left .about-title {
-  color: var(--color-secondary);
-}
-#about .about-left .about-subtitle {
-  color: var(--color-primary);
-}
+
 #about .about-left p {
   margin-top: 30px;
-  margin-right: 40%;
   color: var(--color-secondary);
 }
 
@@ -279,18 +248,166 @@ body {
   max-height: 600px;
 }
 
+#about .arrow-box{
+  margin-left: 28%;
+  margin-top: -2%;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+
+#portfolio {
+  position: relative;
+  background-image: url("assets/svg/frame3.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+}
+#portfolio h2 {
+  text-align: center;
+
+}
+.card {
+  background-color: rgba(57, 62, 70,0.5);
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+  filter: blur(6px);
+}
+
+.card .caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.card:hover .caption {
+  opacity: 1;
+}
+
+.card h3 {
+  color: var(--color-secondary);
+  font-family: var(--font-primary);
+  font-weight: bold;
+  margin: 0;
+  font-size: 20px;
+}
+
+.card p {
+  font-family: var(--font-primary);
+  color: var(--color-secondary);
+  font-weight: bold;
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+/*--------------------------------------------------------------
+# Mobile Mode
+--------------------------------------------------------------*/
 @media (max-width: 768px) {
+  .vertical-line {
+    left: 37.5%;
+    display: block;
+    height: 700px;
+  }
+
+  .navbar-name {
+    font-size: 16px;
+    margin-left: 0%;
+  }
+  .navbar-menu li{
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  #home .button1,
+  .button2 {
+    margin-right: 10px;
+  }
+
+  #home .whoiam {
+    font-size: 40px;
+    margin-left: 5%;
+  }
+  #home .button1,
+  .button2 {
+    margin-right: 10px;
+  }
+
+  #home .whoiam {
+    font-size: 40px;
+    margin-left: 5%;
+  }
+  .arrow-container {
+    position: absolute;
+    bottom: 20px;
+    left: 33%;
+    transform: translateX(-50%);
+    z-index: 999;
+  }
+
+  .arrow-box {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 2%;
+  }
+  #about .col-md-6 {
+    height: 300px;
+  }
+  .about-left {
+    position: relative;
+    text-align: center;
+    top: -35%;
+  }
+
   .about-right lottie-player {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 350px;
+    max-height: 350px;
+  }
+
+  #portfolio {
+    justify-content: flex-start;
+  }
+  .card {
+    margin-left: 8%;
+    margin-bottom: 20px;
   }
 }
+
 
 @media (max-width: 480px) {
   .about-right lottie-player {
     max-width: 300px;
     max-height: 300px;
   }
+
+
 }
 
 
