@@ -221,12 +221,18 @@ h2 {
   background-size: cover;
   min-height: 100vh;
 }
+
 .about-left {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-
+.about-left i{
+  color: var(--color-secondary);
+  top: 50px;
+  margin-right: 20px;
+  font-size: 30px;
+}
 #about h2 {
   top: 90px;
   position: relative;
@@ -235,6 +241,7 @@ h2 {
 #about .about-left p {
   margin-top: 30px;
   color: var(--color-secondary);
+  margin-bottom: 30px;
 }
 
 #about .about-right {
