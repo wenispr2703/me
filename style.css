@@ -35,6 +35,11 @@ h2 {
 .subtitle {
   color: var(--color-primary);
 }
+.follow {
+  font-family: var(--font-primary);
+  font-weight: bold;
+  color: var(--color-secondary);
+}
 
 .arrow-box i {
   position: relative;
@@ -58,7 +63,7 @@ h2 {
 # Vertical & Horizontal Line
 --------------------------------------------------------------*/
 .vertical-line {
-  margin-top: -20px;
+  margin-top: -1px;
   position: absolute;
   width: 0.1px;
   opacity: 0.5;
@@ -349,7 +354,145 @@ h2 {
   font-size: 12px;
   margin-top: 10px;
 }
+#portfolio .arrow-box{
+  position: absolute;
+  margin-left: 25%;
+}
 
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+#contact {
+  position: relative;
+  background-image: url("assets/svg/frame4.svg");
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+#contact .row{
+  margin-top: 30px;
+}
+#contact h2 {
+  line-height: normal;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  color: var(--color-secondary);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  color: var(--color-secondary);
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(57, 62, 70, 0.2);
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none; 
+  border: none; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+button[type="submit"] {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.send-button {
+  position: relative;
+}
+
+.send-button i {
+  position: absolute;
+  left: 5px; /* Atur jarak ikon dari kiri */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+button[type="submit"]:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background-color: rgba(57, 62, 70, 0.1);
+}
+
+#contact .arrow-box {
+  position: absolute;
+  margin-left: 83%;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer .container ul {
+  margin-top: 5%;
+} 
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.footer-links li a{
+  color: var(--color-secondary);
+  margin: 0 25px;
+}
+
+.footer-links li span {
+  font-style: normal;
+  color: var(--color-secondary);
+  display: inline-block;
+  margin-left: 5px;
+}
+.social-media {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.social-media a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-tertiary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 5px;
+  margin-right:10px;
+  color: var(--color-secondary);
+}
+
+.social-media a i {
+  font-size: 18px;
+}
+
+.container .terms {
+  color: var(--color-secondary);
+  text-align: right;
+  margin: 0;
+  margin-top: 10%;
+  margin-bottom: 30px;
+}
 /*--------------------------------------------------------------
 # Mobile Mode
 --------------------------------------------------------------*/
@@ -417,13 +560,27 @@ h2 {
 
   #portfolio {
     justify-content: flex-start;
+    margin-bottom: 50px;
   }
+  
   .card {
     margin-left: 8%;
     margin-bottom: 20px;
   }
+  #contact {
+  background-image: url("assets/svg/frame5.svg");
+  margin-bottom: 50px;
+  }
+  .footer-links {
+    margin-left: 8%;
+    font-size: 16px;
+  }
+  .container .terms {
+    
+    text-align: center;
+    
+  }
 }
-
 
 @media (max-width: 480px) {
   .about-right lottie-player {
